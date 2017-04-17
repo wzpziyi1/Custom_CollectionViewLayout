@@ -15,6 +15,7 @@
 		0952F6A51EA47E70009EBC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0952F6A31EA47E70009EBC7C /* LaunchScreen.storyboard */; };
 		0952F6B01EA47E70009EBC7C /* Custom_CollectionViewLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952F6AF1EA47E70009EBC7C /* Custom_CollectionViewLayoutTests.swift */; };
 		0952F6BB1EA47E70009EBC7C /* Custom_CollectionViewLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952F6BA1EA47E70009EBC7C /* Custom_CollectionViewLayoutUITests.swift */; };
+		09C12B831EA4DCB90078E4EA /* ZYLineLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C12B821EA4DCB90078E4EA /* ZYLineLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0952F6B61EA47E70009EBC7C /* Custom_CollectionViewLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Custom_CollectionViewLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0952F6BA1EA47E70009EBC7C /* Custom_CollectionViewLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_CollectionViewLayoutUITests.swift; sourceTree = "<group>"; };
 		0952F6BC1EA47E70009EBC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09C12B821EA4DCB90078E4EA /* ZYLineLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYLineLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		0952F6C81EA47F1E009EBC7C /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				09C12B821EA4DCB90078E4EA /* ZYLineLayout.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				0952F6A01EA47E70009EBC7C /* Custom_CollectionViewLayout.xcdatamodeld in Sources */,
 				0952F69A1EA47E70009EBC7C /* ViewController.swift in Sources */,
+				09C12B831EA4DCB90078E4EA /* ZYLineLayout.swift in Sources */,
 				0952F6981EA47E70009EBC7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +541,7 @@
 				0952F6C11EA47E70009EBC7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0952F6C21EA47E70009EBC7C /* Build configuration list for PBXNativeTarget "Custom_CollectionViewLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +550,7 @@
 				0952F6C41EA47E70009EBC7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0952F6C51EA47E70009EBC7C /* Build configuration list for PBXNativeTarget "Custom_CollectionViewLayoutUITests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +559,7 @@
 				0952F6C71EA47E70009EBC7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
