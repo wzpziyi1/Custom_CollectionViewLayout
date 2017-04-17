@@ -44,6 +44,32 @@ class ZYLineLayout: UICollectionViewFlowLayout {
     }
     
     
+    /// 当停止滚动的时候，重新设置最近的cell处于屏幕中间
+    ///
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+        //当前屏幕可见范围
+        let visibleRect : CGRect = CGRect(origin: proposedContentOffset, size: collectionView!.bounds.size)
+        
+        
+        /// 拿到当前可见cells的attributes
+        let oallAttributes = layoutAttributesForElements(in: visibleRect)
+        var minMargin = CGFloat(MAXFLOAT)
+        let centerX = proposedContentOffset.x + 0.5 * collectionView!.bounds.width
+        
+        guard let allAttributes = oallAttributes else {
+            return proposedContentOffset
+        }
+        
+        for (_, attribute) in allAttributes.enumerated() {
+            
+            if abs(attribute.center.x - centerX) < abs(minMargin) {
+                minMargin = attribute.center.x - centerX
+            }
+        }
+        
+        return CGPoint(x: proposedContentOffset.x + minMargin, y: proposedContentOffset.y)
+    }
+    
     ///
     /// - Returns: 所有的cell的attributes属性
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
