@@ -40,9 +40,9 @@
 		0952F6991EA47E70009EBC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0952F69C1EA47E70009EBC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0952F69F1EA47E70009EBC7C /* Custom_CollectionViewLayout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Custom_CollectionViewLayout.xcdatamodel; sourceTree = "<group>"; };
-		0952F6A11EA47E70009EBC7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0952F6A11EA47E70009EBC7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		0952F6A41EA47E70009EBC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0952F6A61EA47E70009EBC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0952F6A61EA47E70009EBC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		0952F6AB1EA47E70009EBC7C /* Custom_CollectionViewLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Custom_CollectionViewLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0952F6AF1EA47E70009EBC7C /* Custom_CollectionViewLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_CollectionViewLayoutTests.swift; sourceTree = "<group>"; };
 		0952F6B11EA47E70009EBC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +99,11 @@
 		0952F6961EA47E70009EBC7C /* Custom_CollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
+				0952F6C81EA47F1E009EBC7C /* Layout */,
 				0952F6971EA47E70009EBC7C /* AppDelegate.swift */,
 				0952F6991EA47E70009EBC7C /* ViewController.swift */,
 				0952F69B1EA47E70009EBC7C /* Main.storyboard */,
-				0952F6A11EA47E70009EBC7C /* Assets.xcassets */,
-				0952F6A31EA47E70009EBC7C /* LaunchScreen.storyboard */,
-				0952F6A61EA47E70009EBC7C /* Info.plist */,
-				0952F69E1EA47E70009EBC7C /* Custom_CollectionViewLayout.xcdatamodeld */,
+				0952F6C91EA47F34009EBC7C /* Source */,
 			);
 			path = Custom_CollectionViewLayout;
 			sourceTree = "<group>";
@@ -126,6 +124,24 @@
 				0952F6BC1EA47E70009EBC7C /* Info.plist */,
 			);
 			path = Custom_CollectionViewLayoutUITests;
+			sourceTree = "<group>";
+		};
+		0952F6C81EA47F1E009EBC7C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		0952F6C91EA47F34009EBC7C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0952F6A11EA47E70009EBC7C /* Assets.xcassets */,
+				0952F6A31EA47E70009EBC7C /* LaunchScreen.storyboard */,
+				0952F6A61EA47E70009EBC7C /* Info.plist */,
+				0952F69E1EA47E70009EBC7C /* Custom_CollectionViewLayout.xcdatamodeld */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +333,7 @@
 				0952F6A41EA47E70009EBC7C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -546,7 +563,8 @@
 				0952F69F1EA47E70009EBC7C /* Custom_CollectionViewLayout.xcdatamodel */,
 			);
 			currentVersion = 0952F69F1EA47E70009EBC7C /* Custom_CollectionViewLayout.xcdatamodel */;
-			path = Custom_CollectionViewLayout.xcdatamodeld;
+			name = Custom_CollectionViewLayout.xcdatamodeld;
+			path = ../Custom_CollectionViewLayout.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
