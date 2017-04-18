@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ZYWaterFlowLayoutDelegate: class {
-    func waterFlowLayout(_ waterFlowLayout: ZYWaterFlowLayout, heightForCellAtIndexPath: IndexPath) -> CGFloat
+    func waterFlowLayout(_ waterFlowLayout: ZYWaterFlowLayout, heightForCellAt indexPath: IndexPath) -> CGFloat
 }
 
 class ZYWaterFlowLayout: UICollectionViewLayout {
@@ -36,9 +36,9 @@ class ZYWaterFlowLayout: UICollectionViewLayout {
     
     /// 只要显示的边界发生改变就重新布局:
     /// 内部会重新调用prepareLayout和layoutAttributesForElementsInRect方法获得所有cell的布局属性
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return true
-    }
+//    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+//        return true
+//    }
     
     
     /// 在这里，初始化maxYDict、allAttributes
@@ -89,15 +89,16 @@ class ZYWaterFlowLayout: UICollectionViewLayout {
         let columnsCount = CGFloat(style.columnsCount)
         let width = (collectionView!.frame.size.width - style.sectionInsets.left - style.sectionInsets.right - (columnsCount - 1) * style.columnMargin) / columnsCount;
         
-        let height = self.delegate?.waterFlowLayout(self, heightForCellAtIndexPath: indexPath) ?? 0
+        let height = self.delegate?.waterFlowLayout(self, heightForCellAt: indexPath) ?? 0
         
         let x = style.sectionInsets.left + (width + style.columnMargin) * CGFloat(Int(minYColumn)!);
         let y = maxYDict[minYColumn]! + style.rowMargin
         
-        maxYDict[minYColumn] = y
+        maxYDict[minYColumn] = y + height
         
-        let attribute = super.layoutAttributesForItem(at: indexPath)
-        attribute?.frame = CGRect(x: x, y: y, width: width, height: height)
+        //创建属性
+        let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+        attribute.frame = CGRect(x: x, y: y, width: width, height: height)
         return attribute
     }
     
