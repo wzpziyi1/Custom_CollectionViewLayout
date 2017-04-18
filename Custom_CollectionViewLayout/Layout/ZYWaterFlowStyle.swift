@@ -10,9 +10,9 @@ import UIKit
 
 class ZYWaterFlowStyle: NSObject {
 
-    var sectionInsets: UIEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 30)
+    var sectionInsets: UIEdgeInsets = UIEdgeInsetsMake(30, 0, 30, 0)
     var rowMargin: CGFloat = 10
-    var columMargin: CGFloat = 10
-    var columsCount: Int = 3
+    var columnMargin: CGFloat = 10
+    var columnsCount: Int = 3
 
 }
