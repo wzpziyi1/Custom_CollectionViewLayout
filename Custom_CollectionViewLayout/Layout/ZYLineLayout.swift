@@ -4,7 +4,7 @@
 //
 //  Created by 王志盼 on 2017/4/17.
 //  Copyright © 2017年 王志盼. All rights reserved.
-//
+//  横向滚动放大的布局
 
 import UIKit
 
